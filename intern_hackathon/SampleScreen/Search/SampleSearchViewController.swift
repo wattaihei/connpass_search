@@ -5,21 +5,21 @@ final class SampleSearchViewContorller: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
-        searchArticles()
+        searchEvents()
     }
     
-    private func searchArticles() {
+    private func searchEvents() {
         // 多重タップ防止
         searchButton.isEnabled = false
         
         guard let text = textField.text, !text.isEmpty else { return }
 
-        APIClient.fetchArticles(keyword: text) { [weak self] result in
+        APIClient.fetchEvents(keyword: text) { [weak self] result in
             // URLSessionはbackground threadで行われる為UIの更新を明示的にMain Theadで行う
             DispatchQueue.main.sync {
                 switch result {
-                case .success(let articles):
-                    self?.showSampleArticleListScreen(articles)
+                case .success(let events):
+                    self?.showSampleEventListScreen(events)
                     
                 case .failure(let error):
                     let alert = UIAlertController.createErrorAlert(error)
@@ -31,8 +31,8 @@ final class SampleSearchViewContorller: UIViewController {
         }
     }
     
-    private func showSampleArticleListScreen(_ articles: [Article]) {
-        let sampleArticleListViewController = SampleArticleListViewController.makeInstance(articles)
-        navigationController?.pushViewController(sampleArticleListViewController, animated: true)
+    private func showSampleEventListScreen(_ events: [Event]) {
+        let sampleEventListViewController = SampleEventListViewController.makeInstance(events)
+        navigationController?.pushViewController(sampleEventListViewController, animated: true)
     }
 }

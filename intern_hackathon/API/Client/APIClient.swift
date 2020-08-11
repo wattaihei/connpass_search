@@ -3,13 +3,12 @@ import UIKit
 final class APIClient {
     // swiftlint:disable cyclomatic_complexity
     // swiftlint:disable function_body_length
-    static func fetchArticles(keyword: String,
-                              completion: @escaping(Result<[Article], ErrorType>) -> Void ) {
+    static func fetchEvents(keyword: String,
+                            completion: @escaping(Result<[Event], ErrorType>) -> Void ) {
         
-        var urlComps = URLComponents(string: "https://qiita.com/api/v2/items")!
-        let queryItems = [URLQueryItem(name: "page", value: "1"),
-                          URLQueryItem(name: "per_page", value: "20"),
-                          URLQueryItem(name: "query", value: keyword)]
+        var urlComps = URLComponents(string: "https://connpass.com/api/v1/event")!
+        let queryItems = [URLQueryItem(name: "count", value: "20"),
+        URLQueryItem(name: "keyword", value: keyword)]
         urlComps.queryItems = queryItems
         
         let session = URLSession(configuration: .default)
@@ -59,8 +58,8 @@ final class APIClient {
             Logger.prettyPrint(data: data)
 
             do {
-                let response = try JSONDecoder().decode([Article].self, from: data)
-                completion(.success(response))
+                let response = try JSONDecoder().decode(Events.self, from: data)
+                completion(.success(response.events))
                 
             } catch {
                 Logger.printError(error: ErrorType.decode)

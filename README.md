@@ -1,4 +1,4 @@
-# iOS 3daysサマーインターン事前課題🏄
+# iOS 3daysサマーインターン本番課題🏄
 <img src="https://github.com/ikawashima-cq/Resource/blob/master/caraquri_logo_hz_cmyk%20(2).png" width="90%">
 
 ## 目次
@@ -12,20 +12,19 @@
 ## 課題について
 
 ### 課題概要
-からくり株式会社 iOS 3dayサマーインターンに参加するにあたり、技術的に困らないようにするための事前課題です。
-
-本課題が与えられた方は、下記の概要を詳しく読んだ上で課題を取り組んでください。
+からくり株式会社 iOS 3dayサマーインターン(ハッカソン)の本番課題です。
+下記の概要を詳しく読んだ上で課題を取り組んでください。
 
 ### 課題の取り組み方
 - Githubにて`Use this template`を使用し、個人のリポジトリにコピー(publicにして下さい)して課題に取り組んでください。
 コーディング規約:
 - 標準的なコーディング規約であればどれに準じても良いですが、例として[参考リンク](
-https://github.com/yumemi/ios-engineer-codecheck)を載せます。
+https://github.com/eure/swift-style-guide/blob/master/README_jp.md)を載せます。
 
 ## プロジェクト概要
 
 ### アプリ概要
-Qiitaの記事を検索するアプリです。
+Connpassの記事を検索するアプリです。
 
 ### ビルド環境
 - Xcode: 11.6
@@ -59,23 +58,10 @@ xcode上で command+R でビルド
 
 ※install.shで`SwiftLint`と`carthage`のアップデート(インストール)を行っている。
 
-### 課題の進めかた
-1. 課題1(最低限取り組んで欲しいもの)を行ってください。
-2. 課題2の中から実装できるところまで実装してください(実力を高めます)
-
 ### PRを作成する上での注意点
 - ローカルでビルドできている
 - 動作確認までしている
 - SwiftLintで出力されている警告はなるべく削除する
-
-### 当日までに調べておいて欲しい概念
-- Swiftのアクセス修飾子
-- オプショナルバインディング
-- TableView等基礎的なView
-- コードでの画面遷移
-  - present, push の違い
-- 循環参照
-- ライフサイクル
 
 ## 予備知識
 
@@ -108,9 +94,9 @@ xcode上で command+R でビルド
 --- | ---
 APIクライアント | Postman, Pawなど
 HTTP通信キャプチャ | Charles
-Gitクライアント |  Source Treeなど 
+Gitクライアント |  Source Treeなど
 
 ### 参考資料
 - [Appleの公式ドキュメント](https://swift.org/documentation/api-design-guidelines/)
-- [Qiita API v2 documentation](https://qiita.com/api/v2/docs)
+- [connpass API リファレンス](https://connpass.com/about/api/)
 - [リーダブルコード要約](https://qiita.com/AKB428/items/20e81ccc8d9998b5535d)

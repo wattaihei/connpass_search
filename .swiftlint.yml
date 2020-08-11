@@ -1,7 +1,7 @@
 # Lint対象から除外するパス
 excluded:
 - Carthage
-- intern_homework/R.generated.swift
+- intern_hackathon/R.generated.swift
 
 # デフォルトだと厳しすぎるため
 line_length:

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJQ-gc-49y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJQ-gc-49y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--記事一覧-->
         <scene sceneID="SC0-dD-dNl">
             <objects>
-                <viewController storyboardIdentifier="SampleArticleList" title="記事一覧" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJQ-gc-49y" customClass="SampleArticleListViewController" customModule="intern_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleEventList" title="記事一覧" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJQ-gc-49y" customClass="SampleEventListViewController" customModule="intern_hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZpX-le-3SW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
