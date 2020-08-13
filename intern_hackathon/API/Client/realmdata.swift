@@ -9,8 +9,17 @@
 import UIKit
 import RealmSwift
 
-class Realmdata: Object {
+class Realmdatas: Object {
     
-    @objc dynamic var name: String?
-    
+    @objc dynamic var title: String?
+    @objc dynamic var url: String?
+    @objc dynamic var id: Int = 0
+    @objc dynamic var tapDate: Date?
+}
+
+struct FavoriteData{
+    var title:String?
+    var url:String?
+    var id:Int?
+    var tapDate:Date?
 }

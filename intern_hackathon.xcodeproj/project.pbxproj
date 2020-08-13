@@ -31,6 +31,10 @@
 		8C3BA08324E4BD870063A677 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3BA08024E4BD870063A677 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C3BA08424E4BD870063A677 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3BA08124E4BD870063A677 /* Realm.framework */; };
 		8C3BA08524E4BD870063A677 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3BA08124E4BD870063A677 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C3BA08C24E4DD6E0063A677 /* favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3BA08B24E4DD6E0063A677 /* favorite.storyboard */; };
+		8C3BA08F24E4DF580063A677 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3BA08D24E4DF580063A677 /* FavoriteViewController.swift */; };
+		8C3BA09524E4FC7C0063A677 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3BA09324E4FC7C0063A677 /* FavoriteTableViewCell.swift */; };
+		8C3BA09624E4FC7C0063A677 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3BA09424E4FC7C0063A677 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +78,10 @@
 		8C3BA03F24E4B1CE0063A677 /* realmdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realmdata.swift; sourceTree = "<group>"; };
 		8C3BA08024E4BD870063A677 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		8C3BA08124E4BD870063A677 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		8C3BA08B24E4DD6E0063A677 /* favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = favorite.storyboard; sourceTree = "<group>"; };
+		8C3BA08D24E4DF580063A677 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		8C3BA09324E4FC7C0063A677 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		8C3BA09424E4FC7C0063A677 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,10 @@
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
 				082CF76624D5A816001F7680 /* EventList */,
+				8C3BA08B24E4DD6E0063A677 /* favorite.storyboard */,
+				8C3BA09424E4FC7C0063A677 /* TableViewCell.xib */,
+				8C3BA09324E4FC7C0063A677 /* FavoriteTableViewCell.swift */,
+				8C3BA08D24E4DF580063A677 /* FavoriteViewController.swift */,
 			);
 			path = SampleScreen;
 			sourceTree = "<group>";
@@ -291,6 +303,8 @@
 			files = (
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
+				8C3BA09624E4FC7C0063A677 /* TableViewCell.xib in Resources */,
+				8C3BA08C24E4DD6E0063A677 /* favorite.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
@@ -384,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3BA09524E4FC7C0063A677 /* FavoriteTableViewCell.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
@@ -394,6 +409,7 @@
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
+				8C3BA08F24E4DF580063A677 /* FavoriteViewController.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
