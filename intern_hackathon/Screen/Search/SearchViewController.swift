@@ -30,11 +30,11 @@ final class SearchViewController: UIViewController {
         APIClient.fetchEvents(keyword: text) { [ weak self] result in
             DispatchQueue.main.sync {
                 switch result {
-                    // 成功した場合
-                    case .success(let events):
+                // 成功した場合
+                case .success(let events):
                     self?.showEventListScreen(events)
-                    // 失敗した場合
-                    case .failure(let error):
+                // 失敗した場合
+                case .failure(let error):
                     let alert = UIAlertController.createErrorAlert(error)
                     self?.present(alert, animated: true)
                 }
@@ -45,7 +45,8 @@ final class SearchViewController: UIViewController {
     
     // EventScreenを表示する機能
     private func showEventListScreen(_ events: [Event]) {
-        print("eventScreen")
+        let searchResultViewController = SearchResultViewController.makeInstance(events)
+        navigationController?.pushViewController(searchResultViewController, animated: true)
     }
     
 }
