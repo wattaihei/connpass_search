@@ -22,7 +22,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         favoriteTableData.register(UITableViewCell.self, forCellReuseIdentifier: "favoriteCell")
         do{
             let realm = try Realm()
-            let realmdata2 = realm.objects(Realmdatas.self)
+            let realmdata2 = realm.objects(RealmEventData.self)
             for data in realmdata2 {
                 print("name: \(String(describing: data.title))")
                 print("name: \(String(describing: data.url))")

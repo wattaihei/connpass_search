@@ -7,7 +7,7 @@ final class SampleEventListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var events: [Event] = []
-    var favoriteEvents:[Realmdatas] = []
+    var favoriteEvents:[RealmEventData] = []
 
     static func makeInstance(_ events: [Event]) -> SampleEventListViewController {
         let sampleEventListViewController = R.storyboard.sampleEventList.instantiateInitialViewController()!
@@ -39,7 +39,7 @@ extension SampleEventListViewController: UITableViewDataSource {
     }
     
     @objc func buttonEvent(_ sender: UIButton) {
-        let realm1 = Realmdatas()
+        let realm1 = RealmEventData()
         let eventName = events[sender.tag]
         
         realm1.title = eventName.title
