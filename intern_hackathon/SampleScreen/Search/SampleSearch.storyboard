@@ -27,7 +27,7 @@
         <!--記事検索-->
         <scene sceneID="7AS-AQ-LNR">
             <objects>
-                <viewController storyboardIdentifier="SampleSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KPi-1w-VBk" customClass="SampleSearchViewContorller" customModule="intern_hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KPi-1w-VBk" customClass="SampleSearchViewContorller" customModule="intern_homework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k4D-mg-pMR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
