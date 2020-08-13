@@ -6,12 +6,14 @@
 //  Copyright © 2020 caraquri. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
 
 class SearchResultCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     func set(_ event: Event) {
         titleLabel.text = event.title
