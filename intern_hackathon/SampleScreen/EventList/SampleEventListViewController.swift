@@ -1,5 +1,6 @@
 import SafariServices
 import UIKit
+import RealmSwift
 
 final class SampleEventListViewController: UIViewController {
     
@@ -29,10 +30,30 @@ extension SampleEventListViewController: UITableViewDataSource {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.sampleEventListCell, for: indexPath),
             let event = events[safe: indexPath.row] else { return UITableViewCell() }
-        
+        _ = UIButton()
+        cell.button.addTarget(self, action: #selector(self.buttonEvent(_: )), for: UIControl.Event.touchUpInside)
+        cell.button.tag = indexPath.row
         cell.set(event)
         return cell
     }
+    
+    @objc func buttonEvent(_ sender: UIButton) {
+        let realm1 = Realmdata()
+        let eventName = events[sender.tag]
+        
+        realm1.name = eventName.title
+           do {
+                  let realm = try Realm()
+                  try realm.write{
+                      realm.add(realm1)
+                      
+                  }
+              }
+              catch {
+                  print("Error...")
+              }
+       }
+    
 }
 
 extension SampleEventListViewController: UITableViewDelegate {

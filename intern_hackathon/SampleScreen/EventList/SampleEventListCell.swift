@@ -6,6 +6,7 @@ final class SampleEventListCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var descriptionTextLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     func set(_ event: Event) {
         titleTextLabel.text = event.title
