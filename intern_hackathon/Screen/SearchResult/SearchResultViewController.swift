@@ -6,6 +6,7 @@
 //  Copyright © 2020 caraquri. All rights reserved.
 //
 
+import RealmSwift
 import SafariServices
 import UIKit
 
@@ -36,10 +37,29 @@ extension SearchResultViewController: UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.searchResultCell, for: indexPath),
             let event = events[safe: indexPath.row] else { return UITableViewCell() }
-        
+        _ = UIButton()
+        cell.favoriteButton.addTarget(self, action: #selector(self.buttonEvent(_: )), for: UIControl.Event.touchUpInside)
+        cell.favoriteButton.tag = indexPath.row
         cell.set(event)
         return cell
     }
+    
+    @objc func buttonEvent(_ sender: UIButton) {
+        let newRealmRecord = RealmEventData()
+        let event = events[sender.tag]
+        
+        newRealmRecord.title = event.title
+        newRealmRecord.url = event.eventURL
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(newRealmRecord)
+            }
+            // print(realm.objects(RealmEventData.self))
+        } catch {
+            print("Error...")
+        }
+       }
 }
 
 extension SearchResultViewController: UITableViewDelegate {

@@ -18,33 +18,49 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-mI-mkG" userLabel="Title">
-                        <rect key="frame" x="4" y="4" width="292" height="21"/>
+                        <rect key="frame" x="4" y="4" width="241" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-AP-7jc" userLabel="Description">
-                        <rect key="frame" x="4" y="42" width="292" height="21"/>
+                        <rect key="frame" x="4" y="42" width="241" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-xu-fhb">
+                        <rect key="frame" x="249" y="11.5" width="47" height="44.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yqW-xu-fhb" secondAttribute="height" multiplier="1:1" id="WFP-gj-IOj"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="heart" catalog="system">
+                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="QBI-AP-7jc" secondAttribute="trailing" constant="4" id="2Nw-ur-rGn"/>
-                    <constraint firstItem="QBI-AP-7jc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="7mM-kg-Zv6"/>
-                    <constraint firstAttribute="trailing" secondItem="FGW-mI-mkG" secondAttribute="trailing" constant="4" id="QqL-Vz-1jM"/>
-                    <constraint firstAttribute="bottom" secondItem="QBI-AP-7jc" secondAttribute="bottom" constant="4" id="cgv-zB-tGG"/>
-                    <constraint firstItem="FGW-mI-mkG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="kae-fv-xvh"/>
-                    <constraint firstItem="FGW-mI-mkG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="qhj-ZJ-Qbc"/>
+                    <constraint firstItem="FGW-mI-mkG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="32q-9c-sKd"/>
+                    <constraint firstItem="QBI-AP-7jc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="5j0-IT-BTl"/>
+                    <constraint firstItem="FGW-mI-mkG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="6dE-wA-Wdl"/>
+                    <constraint firstItem="yqW-xu-fhb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="D9I-QO-BuK"/>
+                    <constraint firstItem="yqW-xu-fhb" firstAttribute="leading" secondItem="FGW-mI-mkG" secondAttribute="trailing" constant="4" id="M8H-XZ-yNC"/>
+                    <constraint firstAttribute="trailing" secondItem="yqW-xu-fhb" secondAttribute="trailing" constant="4" id="Shl-qZ-ZmS"/>
+                    <constraint firstAttribute="bottom" secondItem="QBI-AP-7jc" secondAttribute="bottom" constant="4" id="U3i-E9-dIw"/>
+                    <constraint firstAttribute="bottom" secondItem="yqW-xu-fhb" secondAttribute="bottom" constant="10" id="XRH-3d-IAh"/>
+                    <constraint firstItem="yqW-xu-fhb" firstAttribute="leading" secondItem="QBI-AP-7jc" secondAttribute="trailing" constant="4" id="h9j-Q3-rNK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="QBI-AP-7jc" id="w5x-Tf-1eV"/>
+                <outlet property="favoriteButton" destination="yqW-xu-fhb" id="Yvr-KX-CwL"/>
                 <outlet property="titleLabel" destination="FGW-mI-mkG" id="sWR-Vf-Dr3"/>
             </connections>
             <point key="canvasLocation" x="123.18840579710145" y="96.09375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
 </document>
