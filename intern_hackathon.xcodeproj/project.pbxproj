@@ -152,7 +152,7 @@
 			children = (
 				08C5FE2324CD79D4007100CA /* API */,
 				08527CC924C7001400C1F1D5 /* SampleScreen */,
-				08CC377D24D9870200438D2F /* Screen */,
+				8C3BA09724E52D1B0063A677 /* Screen */,
 				088E557724D6698900A2FE3E /* Utils */,
 				083FD6FF24C33D2900383122 /* AppDelegate.swift */,
 				083FD70824C33D2B00383122 /* Assets.xcassets */,
@@ -181,10 +181,6 @@
 				088E557B24D718A400A2FE3E /* MainTabBar */,
 				082CF75D24D56946001F7680 /* Search */,
 				082CF76624D5A816001F7680 /* EventList */,
-				8C3BA08B24E4DD6E0063A677 /* favorite.storyboard */,
-				8C3BA09424E4FC7C0063A677 /* TableViewCell.xib */,
-				8C3BA09324E4FC7C0063A677 /* FavoriteTableViewCell.swift */,
-				8C3BA08D24E4DF580063A677 /* FavoriteViewController.swift */,
 			);
 			path = SampleScreen;
 			sourceTree = "<group>";
@@ -231,9 +227,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		08CC377D24D9870200438D2F /* Screen */ = {
+		8C3BA09724E52D1B0063A677 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8C3BA08D24E4DF580063A677 /* FavoriteViewController.swift */,
+				8C3BA09324E4FC7C0063A677 /* FavoriteTableViewCell.swift */,
+				8C3BA09424E4FC7C0063A677 /* TableViewCell.xib */,
+				8C3BA08B24E4DD6E0063A677 /* favorite.storyboard */,
 			);
 			path = Screen;
 			sourceTree = "<group>";

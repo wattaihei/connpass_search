@@ -32,34 +32,20 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                 let tapDate = data.tapDate
                 let favorite = FavoriteData(title:title,url:url,id:id,tapDate:tapDate)
                 favoriteData.append(favorite)
-                
             }
         }
         catch(let message){
             print(message)
         }
-        
-        
-        
     }
-    
-    
-
-    
-    // MARK: - Table view data source
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoriteTableData.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath)as?FavoriteTableViewCell
         let favoriteCell  = favoriteData[indexPath.row]
         cell?.favoriteSet(title:favoriteCell.title!,url:favoriteCell.url!,id:favoriteCell.id!,tapDate:favoriteCell.tapDate!)
-        
         return cell!
-        
        }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          favoriteData.count
      }
-     
-    
-     
 }

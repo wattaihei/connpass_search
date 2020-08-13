@@ -7,7 +7,6 @@ final class SampleEventListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var events: [Event] = []
-    var favoriteEvents:[RealmEventData] = []
 
     static func makeInstance(_ events: [Event]) -> SampleEventListViewController {
         let sampleEventListViewController = R.storyboard.sampleEventList.instantiateInitialViewController()!
@@ -26,7 +25,6 @@ extension SampleEventListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.sampleEventListCell, for: indexPath),
@@ -37,7 +35,6 @@ extension SampleEventListViewController: UITableViewDataSource {
         cell.set(event)
         return cell
     }
-    
     @objc func buttonEvent(_ sender: UIButton) {
         let realm1 = RealmEventData()
         let eventName = events[sender.tag]
