@@ -11,7 +11,12 @@ import UIKit
 final class SearchViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var searchButton: UIButton!
+    
+    override func viewDidLoad() {
+            label.isHidden = true
+    }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         searchEvents()
@@ -19,12 +24,15 @@ final class SearchViewController: UIViewController {
     
     // 検索ボタンタップ機能
     private func searchEvents() {
-        searchButton.isEnabled = false
+
         // nilあるいは空の確認
         guard let text = textField.text, !text.isEmpty else {
-            
+            label.isHidden = false
             return
         }
+        
+        label.isHidden = true
+        searchButton.isEnabled = false
         
         // API
         APIClient.fetchEvents(keyword: text) { [ weak self] result in

@@ -32,19 +32,27 @@
                                     <action selector="searchButtonTapped:" destination="lAv-ZW-wkZ" eventType="touchUpInside" id="qec-lV-ihr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワードを入力して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-xT-8qB">
+                                <rect key="frame" x="42" y="307" width="331" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.84937507398237433" green="0.23853189455357293" blue="0.14278816270735972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7pw-8Z-LcC"/>
                     </view>
                     <navigationItem key="navigationItem" title="イベント検索" id="O4Y-Nf-AQ3"/>
                     <connections>
+                        <outlet property="label" destination="gsU-xT-8qB" id="VNw-j0-WkD"/>
                         <outlet property="searchButton" destination="65t-5b-jzR" id="vyd-bA-Xot"/>
                         <outlet property="textField" destination="tS4-u8-kd3" id="5fW-BA-Ml5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYy-C9-MMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015.9420289855074" y="159.375"/>
+            <point key="canvasLocation" x="892.75362318840587" y="141.96428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ev8-kY-4kK">
