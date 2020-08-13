@@ -32,6 +32,7 @@
 		E00B8EA324E4CD6B00733DAF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00B8EA124E4CD6B00733DAF /* SearchResultCell.xib */; };
 		E04B13A324E3DD6900487A82 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B13A224E3DD6800487A82 /* SearchResult.storyboard */; };
 		E04B13A524E3DF9000487A82 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B13A424E3DF9000487A82 /* SearchResultViewController.swift */; };
+		E07F05B024E52D0100E01276 /* RealmEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07F05AF24E52D0100E01276 /* RealmEventData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		E00B8EA124E4CD6B00733DAF /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		E04B13A224E3DD6800487A82 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		E04B13A424E3DF9000487A82 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		E07F05AF24E52D0100E01276 /* RealmEventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEventData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		083FD6FE24C33D2900383122 /* intern_hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				E07F05AE24E52CE500E01276 /* Realm */,
 				08C5FE2324CD79D4007100CA /* API */,
 				08527CC924C7001400C1F1D5 /* SampleScreen */,
 				08CC377D24D9870200438D2F /* Screen */,
@@ -206,10 +209,21 @@
 		08CC377D24D9870200438D2F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				E07F05B324E52DB500E01276 /* Tab  */,
+				E07F05B224E52D7F00E01276 /* Favorite  */,
 				175DA94B24E3E0B6006B6D1F /* Search */,
 				E04B13A124E3DC5900487A82 /* SearchResult */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		175DA94B24E3E0B6006B6D1F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				175DA95224E3E1D9006B6D1F /* Search.storyboard */,
+				175DA95024E3E1CF006B6D1F /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		E04B13A124E3DC5900487A82 /* SearchResult */ = {
@@ -223,15 +237,28 @@
 			path = SearchResult;
 			sourceTree = "<group>";
 		};
-        175DA94B24E3E0B6006B6D1F /* Search */ = {
-            isa = PBXGroup;
-            children = (
-                175DA95224E3E1D9006B6D1F /* Search.storyboard */,
-                175DA95024E3E1CF006B6D1F /* SearchViewController.swift */,
-            );
-            path = Search;
-            sourceTree = "<group>";
-        };
+		E07F05AE24E52CE500E01276 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E07F05AF24E52D0100E01276 /* RealmEventData.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E07F05B224E52D7F00E01276 /* Favorite  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Favorite ";
+			sourceTree = "<group>";
+		};
+		E07F05B324E52DB500E01276 /* Tab  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tab ";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +272,7 @@
 				083FD6FA24C33D2900383122 /* Resources */,
 				08A6C8E824C46FA600A812DF /* SwiftLint */,
 				083FD71E24C36F5700383122 /* Run Script Carthage */,
+				E07F05B124E52D1700E01276 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -365,6 +393,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		E07F05B124E52D1700E01276 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -384,6 +431,7 @@
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				175DA95124E3E1CF006B6D1F /* SearchViewController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
+				E07F05B024E52D0100E01276 /* RealmEventData.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
 				086F846524D997A00084571E /* UIAlertController+Extensions.swift in Sources */,
