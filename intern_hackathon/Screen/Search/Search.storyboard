@@ -16,31 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tS4-u8-kd3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tS4-u8-kd3">
                                 <rect key="frame" x="63" y="265" width="288" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="Fvp-Cl-J3Z"/>
+                                    <constraint firstAttribute="height" constant="34" id="JuL-ue-Egm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65t-5b-jzR">
-                                <rect key="frame" x="149" y="567" width="117" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65t-5b-jzR">
+                                <rect key="frame" x="149" y="604" width="117" height="41"/>
+                                <color key="backgroundColor" red="0.05981048196554184" green="0.33046591281890869" blue="0.85459333658218384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="JV2-Ic-5ZC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="検索"/>
+                                <state key="normal" title="検索">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="lAv-ZW-wkZ" eventType="touchUpInside" id="qec-lV-ihr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワードを入力して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-xT-8qB">
-                                <rect key="frame" x="42" y="307" width="331" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キーワードを入力して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-xT-8qB">
+                                <rect key="frame" x="88" y="307" width="238.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.84937507398237433" green="0.23853189455357293" blue="0.14278816270735972" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tS4-u8-kd3" firstAttribute="centerX" secondItem="65t-5b-jzR" secondAttribute="centerX" id="4VG-GA-0Mp"/>
+                            <constraint firstItem="gsU-xT-8qB" firstAttribute="top" secondItem="tS4-u8-kd3" secondAttribute="bottom" constant="8" id="Pvt-Wd-4UM"/>
+                            <constraint firstItem="tS4-u8-kd3" firstAttribute="centerX" secondItem="58h-k9-JIE" secondAttribute="centerX" id="Q0p-K0-KzU"/>
+                            <constraint firstItem="gsU-xT-8qB" firstAttribute="centerX" secondItem="58h-k9-JIE" secondAttribute="centerX" id="XWs-yr-Ytt"/>
+                            <constraint firstItem="7pw-8Z-LcC" firstAttribute="bottom" secondItem="65t-5b-jzR" secondAttribute="bottom" constant="168" id="fbW-ao-ew4"/>
+                            <constraint firstItem="65t-5b-jzR" firstAttribute="leading" secondItem="7pw-8Z-LcC" secondAttribute="leading" constant="149" id="m6h-DZ-KL5"/>
+                            <constraint firstItem="tS4-u8-kd3" firstAttribute="top" secondItem="7pw-8Z-LcC" secondAttribute="top" constant="177" id="ylh-f6-0jW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7pw-8Z-LcC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="検索" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="vft-4j-13R"/>
@@ -54,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYy-C9-MMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="159"/>
+            <point key="canvasLocation" x="900.00000000000011" y="158.70535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ev8-kY-4kK">
