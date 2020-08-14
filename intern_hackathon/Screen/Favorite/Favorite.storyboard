@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="XBd-v4-KUx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="heart" catalog="system" selectedImage="heart.fill" id="PZt-38-Y1e"/>
-                    <navigationItem key="navigationItem" id="s2g-nd-rdy"/>
+                    <navigationItem key="navigationItem" title="お気に入り" id="s2g-nd-rdy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoriteTableView" destination="SOR-3a-Ej5" id="ROm-Wp-RMd"/>

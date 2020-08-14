@@ -16,7 +16,7 @@ final class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         // navbarの色設定
-        navigationController?.navigationBar.barTintColor = UIColor(red: 109 / 255, green: 185 / 255, blue: 208 / 255, alpha: 100)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 43 / 255, green: 136 / 255, blue: 203 / 255, alpha: 87)
         
         // navbarの文字色
         self.navigationController?.navigationBar.titleTextAttributes = [
@@ -24,18 +24,21 @@ final class SearchViewController: UIViewController {
         ]
         
         // tabbarの色設定
-        tabBarController?.tabBar.barTintColor = UIColor(red: 109 / 255, green: 185 / 255, blue: 208 / 255, alpha: 100)
+        tabBarController?.tabBar.barTintColor = UIColor(red: 43 / 255, green: 136 / 255, blue: 203 / 255, alpha: 87)
         
-//        // 常にライトモード（明るい外観）を指定することでダークモード適用を回避
-//        self.overrideUserInterfaceStyle = .light
-//
-        
+        // ダークモード適用を回避
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+
         label.isHidden = true
         
         // 角丸
         searchButton.layer.cornerRadius = 10.0
         // 背景色
-        searchButton.backgroundColor = UIColor(red: 77 / 255, green: 147 / 255, blue: 182 / 255, alpha: 100)
+        searchButton.backgroundColor = UIColor(red: 240 / 255, green: 189 / 255, blue: 106 / 255, alpha: 100)
         // 影
         searchButton.layer.shadowOpacity = 0.16
         searchButton.layer.shadowRadius = 2.0
