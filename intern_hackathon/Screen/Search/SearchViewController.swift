@@ -53,15 +53,19 @@ final class SearchViewController: UIViewController {
         searchEvents()
     }
     
+    // キーボードを収納機能
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // 検索ボタンタップ機能
     private func searchEvents() {
-
+        
         // nilあるいは空の確認
         guard let text = textField.text, !text.isEmpty else {
             label.isHidden = false
             return
         }
-        
+
         label.isHidden = true
         searchButton.isEnabled = false
         
