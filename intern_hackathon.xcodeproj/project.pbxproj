@@ -32,6 +32,11 @@
 		E00B8EA324E4CD6B00733DAF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00B8EA124E4CD6B00733DAF /* SearchResultCell.xib */; };
 		E04B13A324E3DD6900487A82 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B13A224E3DD6800487A82 /* SearchResult.storyboard */; };
 		E04B13A524E3DF9000487A82 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B13A424E3DF9000487A82 /* SearchResultViewController.swift */; };
+		E04F5A4924E646A1004BB74D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04F5A4824E646A1004BB74D /* TabBar.storyboard */; };
+		E04F5A4C24E647E1004BB74D /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04F5A4B24E647E0004BB74D /* Favorite.storyboard */; };
+		E04F5A4E24E64813004BB74D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04F5A4D24E64813004BB74D /* FavoriteViewController.swift */; };
+		E04F5A5124E6483C004BB74D /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04F5A4F24E6483C004BB74D /* FavoriteViewCell.swift */; };
+		E04F5A5224E6483C004BB74D /* FavoriteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04F5A5024E6483C004BB74D /* FavoriteViewCell.xib */; };
 		E07F05B024E52D0100E01276 /* RealmEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07F05AF24E52D0100E01276 /* RealmEventData.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,11 @@
 		E00B8EA124E4CD6B00733DAF /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		E04B13A224E3DD6800487A82 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		E04B13A424E3DF9000487A82 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		E04F5A4824E646A1004BB74D /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		E04F5A4B24E647E0004BB74D /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		E04F5A4D24E64813004BB74D /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		E04F5A4F24E6483C004BB74D /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
+		E04F5A5024E6483C004BB74D /* FavoriteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewCell.xib; sourceTree = "<group>"; };
 		E07F05AF24E52D0100E01276 /* RealmEventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEventData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,8 +219,8 @@
 		08CC377D24D9870200438D2F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E07F05B324E52DB500E01276 /* Tab  */,
-				E07F05B224E52D7F00E01276 /* Favorite  */,
+				E04F5A4A24E646B6004BB74D /* Favorite */,
+				E04F5A4524E64633004BB74D /* TabBar */,
 				175DA94B24E3E0B6006B6D1F /* Search */,
 				E04B13A124E3DC5900487A82 /* SearchResult */,
 			);
@@ -237,26 +247,31 @@
 			path = SearchResult;
 			sourceTree = "<group>";
 		};
+		E04F5A4524E64633004BB74D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E04F5A4824E646A1004BB74D /* TabBar.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E04F5A4A24E646B6004BB74D /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				E04F5A4B24E647E0004BB74D /* Favorite.storyboard */,
+				E04F5A4D24E64813004BB74D /* FavoriteViewController.swift */,
+				E04F5A4F24E6483C004BB74D /* FavoriteViewCell.swift */,
+				E04F5A5024E6483C004BB74D /* FavoriteViewCell.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		E07F05AE24E52CE500E01276 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
 				E07F05AF24E52D0100E01276 /* RealmEventData.swift */,
 			);
 			path = Realm;
-			sourceTree = "<group>";
-		};
-		E07F05B224E52D7F00E01276 /* Favorite  */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Favorite ";
-			sourceTree = "<group>";
-		};
-		E07F05B324E52DB500E01276 /* Tab  */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Tab ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,13 +337,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				088E557624D660B700A2FE3E /* SampleEventListCell.xib in Resources */,
+				E04F5A4924E646A1004BB74D /* TabBar.storyboard in Resources */,
 				E04B13A324E3DD6900487A82 /* SearchResult.storyboard in Resources */,
 				082CF75F24D569E7001F7680 /* SampleSearch.storyboard in Resources */,
 				083FD70C24C33D2B00383122 /* LaunchScreen.storyboard in Resources */,
 				083FD70924C33D2B00383122 /* Assets.xcassets in Resources */,
 				175DA95324E3E1D9006B6D1F /* Search.storyboard in Resources */,
 				082CF76824D5A82F001F7680 /* SampleEventList.storyboard in Resources */,
+				E04F5A4C24E647E1004BB74D /* Favorite.storyboard in Resources */,
 				E00B8EA324E4CD6B00733DAF /* SearchResultCell.xib in Resources */,
+				E04F5A5224E6483C004BB74D /* FavoriteViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,12 +443,14 @@
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
 				088E557524D660B700A2FE3E /* SampleEventListCell.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
+				E04F5A5124E6483C004BB74D /* FavoriteViewCell.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleEventListViewController.swift in Sources */,
 				E04B13A524E3DF9000487A82 /* SearchResultViewController.swift in Sources */,
 				088E557D24D7190300A2FE3E /* MainTabBarController.swift in Sources */,
 				175DA95124E3E1CF006B6D1F /* SearchViewController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Event.swift in Sources */,
+				E04F5A4E24E64813004BB74D /* FavoriteViewController.swift in Sources */,
 				E07F05B024E52D0100E01276 /* RealmEventData.swift in Sources */,
 				0841933924D950FF00BFCBD3 /* ErrorType.swift in Sources */,
 				082CF76124D56DE4001F7680 /* SampleSearchViewController.swift in Sources */,
