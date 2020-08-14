@@ -12,6 +12,7 @@ import UIKit
 class FavoriteViewCell: UITableViewCell {
     
     @IBOutlet weak var titleTextLabel: UILabel!
+    @IBOutlet weak var eventDate: UILabel!
     
     override func awakeFromNib() {        super.awakeFromNib()
 
@@ -21,8 +22,9 @@ class FavoriteViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func favoriteSet(title: String, url: String, id: Int) {
+    func favoriteSet(title: String, url: String, id: Int, startedAt: String) {
         titleTextLabel.text = title
-    
+        eventDate.text = "日時  \(startedAt)"
+        
     }
 }
