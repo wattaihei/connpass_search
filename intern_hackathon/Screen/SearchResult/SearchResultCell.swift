@@ -14,12 +14,14 @@ class SearchResultCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
     
     func set(_ event: Event) {
         titleLabel.text = event.title
         guard let eventDate = event.startedAt else { return }
         guard let eventAddress = event.address else { return }
-        descriptionLabel.text = "日時: " +  eventDate.prefix(10) + "  開催地: " + eventAddress
+        dateLabel.text = "日時: " +  eventDate.prefix(10)
+        descriptionLabel.text = "開催地: " + eventAddress
     }
     
 }

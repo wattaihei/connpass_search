@@ -41,7 +41,7 @@ extension SearchResultViewController: UITableViewDataSource {
         cell.favoriteButton.addTarget(self, action: #selector(self.buttonEvent(_: )), for: UIControl.Event.touchUpInside)
         cell.favoriteButton.tag = indexPath.row
         if isFavored(event) {
-            changeFavoriteIcon(cell)
+            changeFavoriteIcon(cell.favoriteButton)
         }
         cell.set(event)
         return cell
@@ -50,7 +50,7 @@ extension SearchResultViewController: UITableViewDataSource {
     @objc func buttonEvent(_ sender: UIButton) {
         let newRealmRecord = RealmEventData()
         let event = events[sender.tag]
-        
+        changeFavoriteIcon(sender)
         // すでに押されてたら何もしない
         guard !isFavored(event) else { return }
         newRealmRecord.title = event.title
@@ -59,7 +59,6 @@ extension SearchResultViewController: UITableViewDataSource {
         newRealmRecord.id = event.eventID!
         newRealmRecord.tapDate = Date()
         newRealmRecord.startedAt = event.startedAt
-        
 
         do {
             let realm = try Realm()
@@ -84,9 +83,9 @@ extension SearchResultViewController: UITableViewDataSource {
         }
     }
     
-    private func changeFavoriteIcon(_ cell: SearchResultCell) {
+    private func changeFavoriteIcon(_ button: UIButton) {
         let image = UIImage(named: "heart")
-        cell.favoriteButton.setBackgroundImage(image, for: .normal)
+        button.setBackgroundImage(image, for: .normal)
     }
 }
 
