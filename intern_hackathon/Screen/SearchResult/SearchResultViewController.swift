@@ -40,6 +40,9 @@ extension SearchResultViewController: UITableViewDataSource {
         _ = UIButton()
         cell.favoriteButton.addTarget(self, action: #selector(self.buttonEvent(_: )), for: UIControl.Event.touchUpInside)
         cell.favoriteButton.tag = indexPath.row
+        if isFavored(event) {
+            changeFavoriteIcon(cell)
+        }
         cell.set(event)
         return cell
     }
@@ -48,25 +51,48 @@ extension SearchResultViewController: UITableViewDataSource {
         let newRealmRecord = RealmEventData()
         let event = events[sender.tag]
         
+        // すでに押されてたら何もしない
+        guard !isFavored(event) else { return }
         newRealmRecord.title = event.title
         newRealmRecord.url = event.eventURL
+        newRealmRecord.address = event.address
+        newRealmRecord.id = event.eventID!
+        newRealmRecord.tapDate = Date()
+
         do {
             let realm = try Realm()
             try realm.write {
                 realm.add(newRealmRecord)
             }
-            // print(realm.objects(RealmEventData.self))
-        } catch {
-            print("Error...")
+            print(realm.objects(RealmEventData.self))
+        } catch let error {
+            print(error)
         }
-       }
+    }
+    
+    // event がFavされてるか
+    private func isFavored(_ event: Event) -> Bool {
+        do {
+            let realm = try Realm()
+            let matchingEvents = realm.objects(RealmEventData.self).filter("id == " + String(event.eventID!))
+            return !matchingEvents.isEmpty
+        } catch let error {
+            print(error)
+            return false
+        }
+    }
+    
+    private func changeFavoriteIcon(_ cell: SearchResultCell) {
+        let image = UIImage(named: "heart")
+        cell.favoriteButton.setBackgroundImage(image, for: .normal)
+    }
 }
 
 extension SearchResultViewController: UITableViewDelegate {
     
     // height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 100
     }
     
     // select row
