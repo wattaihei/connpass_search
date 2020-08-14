@@ -59,7 +59,6 @@ extension SearchResultViewController: UITableViewDataSource {
         newRealmRecord.id = event.eventID!
         newRealmRecord.tapDate = Date()
         newRealmRecord.startedAt = event.startedAt
-        
 
         do {
             let realm = try Realm()
