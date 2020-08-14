@@ -10,11 +10,10 @@ import RealmSwift
 import UIKit
 
 class RealmEventData: Object {
-    
     @objc dynamic var title: String? = ""
     @objc dynamic var url: String? = ""
     @objc dynamic var id: Int = 0
-    @objc dynamic var tapDate: Date?
+    @objc dynamic var tapDate: Date? = Date()
     @objc dynamic var eventDescription: String? = ""
     @objc dynamic var eventCatch: String? = ""
     @objc dynamic var eventURL: String? = ""
@@ -35,8 +34,8 @@ class RealmEventData: Object {
 }
 
 struct FavoriteData {
-    var title: String?
-    var url: String?
-    var id: Int?
-    var tapDate: Date?
+    var title: String? = ""
+    var url: String? = ""
+    var id: Int? = 0
+    var tapDate: Date? = Date()
 }
