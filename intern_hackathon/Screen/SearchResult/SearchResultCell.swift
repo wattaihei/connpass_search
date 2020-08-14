@@ -17,7 +17,9 @@ class SearchResultCell: UITableViewCell {
     
     func set(_ event: Event) {
         titleLabel.text = event.title
-        descriptionLabel.text = event.address
+        guard let eventDate = event.startedAt else { return }
+        guard let eventAddress = event.address else { return }
+        descriptionLabel.text = "日時: " +  eventDate.prefix(10) + "  開催地: " + eventAddress
     }
     
 }
