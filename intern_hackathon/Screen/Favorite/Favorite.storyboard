@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wS8-HL-BU6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GL0-uf-g9Z">
+            <objects>
+                <navigationController id="wS8-HL-BU6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JUw-xG-lxs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rly-fJ-cll" kind="relationship" relationship="rootViewController" id="ry9-ix-5c0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ic-jb-wyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1190" y="58"/>
+        </scene>
+        <!--お気に入り-->
+        <scene sceneID="HZM-Vg-JA4">
+            <objects>
+                <viewController id="Rly-fJ-cll" customClass="FavoriteViewController" customModule="intern_hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L0z-V1-6fX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SOR-3a-Ej5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XBd-v4-KUx" firstAttribute="trailing" secondItem="SOR-3a-Ej5" secondAttribute="trailing" id="nEa-eQ-ss2"/>
+                            <constraint firstItem="XBd-v4-KUx" firstAttribute="bottom" secondItem="SOR-3a-Ej5" secondAttribute="bottom" id="sGS-lY-SvY"/>
+                            <constraint firstItem="SOR-3a-Ej5" firstAttribute="top" secondItem="XBd-v4-KUx" secondAttribute="top" id="sva-qF-fq1"/>
+                            <constraint firstItem="SOR-3a-Ej5" firstAttribute="leading" secondItem="XBd-v4-KUx" secondAttribute="leading" id="uo1-qj-1hQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XBd-v4-KUx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="heart" catalog="system" selectedImage="heart.fill" id="PZt-38-Y1e"/>
+                    <navigationItem key="navigationItem" title="お気に入り" id="s2g-nd-rdy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoriteTableView" destination="SOR-3a-Ej5" id="ROm-Wp-RMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTH-Eq-ksP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
