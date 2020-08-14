@@ -24,7 +24,7 @@ class FavoriteViewCell: UITableViewCell {
     
     func favoriteSet(title: String, url: String, id: Int, startedAt: String) {
         titleTextLabel.text = title
-        eventDate.text = "日時  \(startedAt)"
+        eventDate.text = "\(startedAt)"
         
     }
 }
