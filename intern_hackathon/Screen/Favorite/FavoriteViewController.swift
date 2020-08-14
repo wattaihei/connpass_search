@@ -15,6 +15,25 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // navbarの色設定
+        navigationController?.navigationBar.barTintColor = UIColor(red: 43 / 255, green: 136 / 255, blue: 203 / 255, alpha: 87)
+        
+        // navbarの文字色
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
+        
+        // tabbarの色設定
+        tabBarController?.tabBar.barTintColor = UIColor(red: 43 / 255, green: 136 / 255, blue: 203 / 255, alpha: 87)
+        
+        // ダークモード適用を回避
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+
         favoriteTableView.delegate = self
         favoriteTableView.dataSource = self
         favoriteTableView.register(UINib(nibName: "FavoriteViewCell", bundle: nil), forCellReuseIdentifier: "favoriteCell")
