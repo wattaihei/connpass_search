@@ -48,7 +48,6 @@ extension SearchResultViewController: UITableViewDataSource {
     }
     
     @objc func buttonEvent(_ sender: UIButton) {
-        
         let newRealmRecord = RealmEventData()
         let event = events[sender.tag]
         changeFavoriteIcon(sender)
@@ -60,6 +59,7 @@ extension SearchResultViewController: UITableViewDataSource {
         newRealmRecord.id = event.eventID!
         newRealmRecord.tapDate = Date()
         newRealmRecord.startedAt = event.startedAt
+        
 
         do {
             let realm = try Realm()

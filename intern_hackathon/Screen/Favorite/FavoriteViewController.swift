@@ -30,7 +30,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                 let url = data.url
                 let id = data.id
                 let tapDate = data.tapDate
-                let favorite = FavoriteData(title: title, url: url, id: id, tapDate: tapDate)
+                let startedAt = data.startedAt
+                let favorite = FavoriteData(title: title, url: url, id: id, tapDate: tapDate, startedAt: startedAt!)
+                
                 favoriteData.append(favorite)
             }
             print("favoriteData\(favoriteData)")
@@ -44,13 +46,15 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         favoriteData.count
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 100
+       }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath)as?FavoriteViewCell else {
             fatalError()
         }
         let favoriteCell = favoriteData[indexPath.row]
-        cell.favoriteSet(title: favoriteCell.title!, url: favoriteCell.url!, id: favoriteCell.id!)
+        cell.favoriteSet(title: favoriteCell.title!, url: favoriteCell.url!, id: favoriteCell.id!, startedAt: favoriteCell.startedAt)
         return cell
     }
 }

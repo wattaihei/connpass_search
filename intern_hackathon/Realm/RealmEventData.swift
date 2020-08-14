@@ -38,4 +38,5 @@ struct FavoriteData {
     var url: String? = ""
     var id: Int? = 0
     var tapDate: Date? = Date()
+    var startedAt: String = ""
 }
