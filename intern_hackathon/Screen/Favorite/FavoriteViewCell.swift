@@ -21,7 +21,7 @@ class FavoriteViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func favoriteSet(title: String, url: String, id: Int, tapDate: Date) {
+    func favoriteSet(title: String, url: String, id: Int) {
         titleTextLabel.text = title
     
     }

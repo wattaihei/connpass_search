@@ -50,7 +50,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             fatalError()
         }
         let favoriteCell = favoriteData[indexPath.row]
-        cell.favoriteSet(title: favoriteCell.title!, url: favoriteCell.url!, id: favoriteCell.id!, tapDate: favoriteCell.tapDate! )
+        cell.favoriteSet(title: favoriteCell.title!, url: favoriteCell.url!, id: favoriteCell.id!)
         return cell
     }
 }
