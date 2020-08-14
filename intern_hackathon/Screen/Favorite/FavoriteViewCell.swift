@@ -25,5 +25,4 @@ class FavoriteViewCell: UITableViewCell {
         titleTextLabel.text = title
     
     }
-    
 }

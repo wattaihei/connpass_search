@@ -9,7 +9,7 @@
 import RealmSwift
 import UIKit
 
-class B:Object{
+class RealmEventData: Object {
     @objc dynamic var title: String? = ""
     @objc dynamic var url: String? = ""
     @objc dynamic var id: Int = 0
