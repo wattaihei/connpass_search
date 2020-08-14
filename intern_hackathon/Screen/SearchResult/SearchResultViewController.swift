@@ -45,7 +45,7 @@ extension SearchResultViewController: UITableViewDataSource {
     }
     
     @objc func buttonEvent(_ sender: UIButton) {
-        let newRealmRecord = RealmEventData()
+        let newRealmRecord = B()
         let event = events[sender.tag]
         
         newRealmRecord.title = event.title
