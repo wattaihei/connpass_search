@@ -18,25 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmR-LS-q2h">
-                        <rect key="frame" x="4" y="10" width="312" height="32.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                        <rect key="frame" x="10" y="10" width="306" height="27.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f62-wU-kPo">
-                        <rect key="frame" x="4" y="72.5" width="312" height="24"/>
+                        <rect key="frame" x="10" y="47.5" width="306" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="MmR-LS-q2h" secondAttribute="trailing" constant="4" id="7Aw-dj-1KR"/>
                     <constraint firstAttribute="trailing" secondItem="f62-wU-kPo" secondAttribute="trailing" constant="4" id="HCE-XG-82H"/>
-                    <constraint firstItem="f62-wU-kPo" firstAttribute="top" secondItem="MmR-LS-q2h" secondAttribute="bottom" constant="30" id="Jvp-2n-BPd"/>
+                    <constraint firstItem="f62-wU-kPo" firstAttribute="top" secondItem="MmR-LS-q2h" secondAttribute="bottom" constant="10" id="Jvp-2n-BPd"/>
                     <constraint firstItem="MmR-LS-q2h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UZO-Rp-gir"/>
-                    <constraint firstItem="MmR-LS-q2h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="oeA-d1-Ubm"/>
-                    <constraint firstItem="f62-wU-kPo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="qiw-24-uHP"/>
+                    <constraint firstItem="MmR-LS-q2h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oeA-d1-Ubm"/>
+                    <constraint firstItem="f62-wU-kPo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qiw-24-uHP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
